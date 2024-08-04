@@ -122,7 +122,7 @@ function filterCountries(countries: [CountryName, Flag][], query: string): [Coun
             name.commonNativeNames.some(n => n.search(regex) !== -1));
     })
 }
-function readCountryDetails(data, name: string): CountryDetails {
+function readCountryDetails(data:any, name: string): CountryDetails {
     const country = new CountryDetails();
     if (["currencies", "languages", "capital", "continents", "landlocked", "population", "region", "subregion"].some((x) => !(x in data))) {
         return country;
@@ -145,8 +145,8 @@ function readCountryDetails(data, name: string): CountryDetails {
     country.subregion = data["subregion"];
     return country;
 }
-function readFlags(data, names: CountryName[]): Flag[] {
-    return data.map((country, i: number) => {
+function readFlags(data : any, names: CountryName[]): Flag[] {
+    return data.map((country : any, i: number) => {
         const flag = country["flags"];
         const png = flag["png"];
         const svg = flag["svg"];
@@ -154,15 +154,15 @@ function readFlags(data, names: CountryName[]): Flag[] {
         return new Flag(png, svg, alt);
     });
 }
-function readNames(data): CountryName[] {
-    return data.map(country => {
+function readNames(data:any): CountryName[] {
+    return data.map((country:any) => {
         const official = country["name"]["official"];
         const common = country["name"]["common"];
         const [officialNative, commonNative] = getNativeNames(country["name"]["nativeName"]);
         return new CountryName(official, common, officialNative, commonNative);
     });
 }
-function getNativeNames(names) {
+function getNativeNames(names : any) {
     const officialNativeNames: string[] = [];
     const commonNativeNames: string[] = [];
     for (const lang in names) {
