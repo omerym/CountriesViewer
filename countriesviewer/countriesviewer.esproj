@@ -17,4 +17,10 @@
   <ItemGroup>
     <None Remove="src\assets\**" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptConfiguration Remove=".vscode\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".vscode\**" />
+  </ItemGroup>
 </Project>
