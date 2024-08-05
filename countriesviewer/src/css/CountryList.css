@@ -17,22 +17,22 @@
         border-style: hidden;
         font-size: 2.5vmin;
         background-color: #00000000;
-        transition: transform 0.25s ease, background-color 0.5s ease;
+        transition: transform 0.25s ease, background-color 0.25s ease;
+    }
+@media (any-hover: hover) {
+    .country:hover {
+        transform: scale(1.2) translateY(-10%);
+        background-color: #fefeaaf0;
+    }
+}
+    .country:active {
+        transform: translateY(7.5%) scale(0.9);
+        background-color: #999988;
     }
 
-        .country:hover, .country:focus {
-            transform: scale(1.2) translateY(-10%);
-            background-color: #fefeaaf0;
-        }
-
-        .country:active {
-            transform: translateY(7.5%) scale(0.9);
-            background-color: #999988;
-        }
-
-        .country h1, .country h2, .country h3, .country h4, .country h5, .country h6 {
-            margin: 0.25%;
-        }
+    .country h1, .country h2, .country h3, .country h4, .country h5, .country h6 {
+        margin: 0.25%;
+    }
 
     .flag {
         margin: 1vh 1vw;
@@ -82,14 +82,15 @@
         background-color: #eeeeee;
     }
 
-        .random-country-button:hover {
-            background-color: #333344;
-            color: #ffffe4;
-            transform: scale(1.1);
-        }
-
-        .random-country-button:active {
-            background-color: #6666;
-            color: #aaaaaf;
-            transform: scale(0.8);
-        }
+@media (any-hover: hover) {
+    .random-country-button:hover {
+        background-color: #333344;
+        color: #ffffe4;
+        transform: scale(1.1);
+    }
+}
+    .random-country-button:active {
+        background-color: #6666;
+        color: #aaaaaf;
+        transform: scale(0.8);
+    }

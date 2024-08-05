@@ -41,11 +41,12 @@
     user-select: none;
 }
 
-.error button:hover {
-    color: #00bbff;
-    background-color: #aaaa990f;
+@media (any-hover: hover) {
+    .error button:hover {
+        color: #00bbff;
+        background-color: #aaaa990f;
+    }
 }
-
     .error button:active {
         color: #0099ee;
         background-color: #aaaa9910;

@@ -53,7 +53,7 @@ function RandomCountryBytton({ countries, setCountry }: RandomCountryByttonProps
     return (
         <button className="random-country-button" onClick={() => {
             if (countries.length !== 0) {
-                const index = Math.floor(Math.random() * (countries.length - 1));
+                const index = Math.floor(Math.random() * (countries.length));
                 const country = countries[index][0].officialName;
                 setCountry(country);
             }

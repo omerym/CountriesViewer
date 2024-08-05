@@ -9,6 +9,9 @@
         padding:2.5vh 2.5vw;
         user-select: none;
     }
-        .navbar li:hover {
-            background-color: #85959f;
-        }
+
+@media (any-hover: hover) {
+    .navbar li:hover {
+        background-color: #85959f;
+    }
+}

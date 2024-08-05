@@ -17,16 +17,17 @@
         padding: 10px;
     }
 
-        .search-bar input:hover {
-            border-style: solid;
-            border-color: #bbbbbb;
-            background-color: #d3d3d3;
-        }
-
-        .search-bar input:focus {
-            transform: scale(1.05);
-            background-color: #dfdfdf;
-        }
+@media (any-hover: hover) {
+    .search-bar input:hover {
+        border-style: solid;
+        border-color: #bbbbbb;
+        background-color: #d3d3d3;
+    }
+}
+    .search-bar input:focus {
+        transform: scale(1.05);
+        background-color: #dfdfdf;
+    }
 
     .search-bar button {
         border-radius: 50px;
@@ -37,14 +38,15 @@
         color: #000000;
     }
 
-        .search-bar button:hover {
-            background-color: #333333;
-            color: #ffffff;
-            transform: scale(1.125);
-        }
-
-        .search-bar button:active {
-            background-color: #666666;
-            color: #eeeeee;
-            transform: scale(1) translate(0.1vw, 0.1vh);
-        }
+@media (any-hover: hover) {
+    .search-bar button:hover {
+        background-color: #333333;
+        color: #ffffff;
+        transform: scale(1.125);
+    }
+}
+    .search-bar button:active {
+        background-color: #666666;
+        color: #eeeeee;
+        transform: scale(1) translate(0.1vw, 0.1vh);
+    }
