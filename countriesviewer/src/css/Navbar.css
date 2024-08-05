@@ -10,7 +10,7 @@
         user-select: none;
     }
 
-@media (any-hover: hover) {
+@media (pointer: fine) {
     .navbar li:hover {
         background-color: #85959f;
     }

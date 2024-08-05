@@ -41,7 +41,7 @@
     user-select: none;
 }
 
-@media (any-hover: hover) {
+@media (pointer: fine) {
     .error button:hover {
         color: #00bbff;
         background-color: #aaaa990f;

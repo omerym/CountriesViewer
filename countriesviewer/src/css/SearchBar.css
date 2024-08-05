@@ -17,7 +17,7 @@
         padding: 10px;
     }
 
-@media (any-hover: hover) {
+@media (pointer: fine) {
     .search-bar input:hover {
         border-style: solid;
         border-color: #bbbbbb;
@@ -38,7 +38,7 @@
         color: #000000;
     }
 
-@media (any-hover: hover) {
+@media (pointer: fine) {
     .search-bar button:hover {
         background-color: #333333;
         color: #ffffff;
