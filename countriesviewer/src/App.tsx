@@ -31,7 +31,7 @@ function App() {
         {countriesView}
     </>;
 }
-interface ErrorProps { children?: React.ReactNode, retryMessage?: string, retry: () => void };
+interface ErrorProps { children?: React.ReactNode, retryMessage?: string, retry: () => void }
 function Error({ children, retryMessage = "click here to retry.", retry }: ErrorProps) {
     return (
         <div className="error">
@@ -113,7 +113,7 @@ function CountryDetails({ countryName, flag }: CountryDetailsProps) {
                         {nativeNames !== '' && <><strong>{continentsTitle}</strong>: {continents}.<br /></>}
                         {nativeNames !== '' && <><strong>{languagesTitle}</strong>: {languages}.<br /></>}
                     {currencies !== '' && <><strong>{currenciesTitle}</strong>: {currencies}.<br /></>}
-                        <strong>area</strong>: {countryDetails.area}.<br />
+                    <strong>area</strong>: {countryDetails.area} km<sup>2</sup>.<br />
                         <strong>region</strong>: {countryDetails.region}, {countryDetails.subregion}.<br />
                         <strong>population</strong>: {countryDetails.population}.<br />
                     </section>
@@ -186,12 +186,12 @@ function Country({ name, flag, maxNativeNames, setCountry }: CountryProps) {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
     return (
-        <div className="country" onClick={clickHandler}>
+        <button className="country" onClick={clickHandler}>
             <h3>{name.commonName}</h3>
             <h5>{name.officialName}</h5>
             <img className="flag" src={flag.png} alt={flag.alt} />
             {nativeNameViews}
-        </div>
+        </button>
     );
 }
 export default App
