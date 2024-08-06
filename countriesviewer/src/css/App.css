@@ -29,12 +29,18 @@
 
 
 .error, .error * {
+    padding:1%;
     margin: auto auto;
     font-size: max(3.5vmin, 1em);
     text-align: center;
     user-select:none;
 }
-.error button {
+@media (prefers-color-scheme:dark){
+    .error, .error *{
+        color:white;
+    }
+
+} .error button {
     color: #00aaff;
     background-color: #00000000;
     border-style: none;

@@ -1,4 +1,17 @@
-
+:root {
+    --search-bar-button-hover-background-color: #333333;
+    --search-bar-button-hover-color: #ffffff;
+    --random-country-button-hover-background-color: #333344;
+    --random-country-button-hover-color: #ffffe4;
+}
+@media(prefers-color-scheme: dark) {
+    :root {
+        --search-bar-button-hover-background-color: #858090;
+        --search-bar-button-hover-color: #000000;
+        --random-country-button-hover-background-color: #9999aa;
+        --random-country-button-hover-color: #000000;
+    }
+}
 .search-bar {
     padding: 1vh;
     text-align: center;
@@ -40,8 +53,8 @@
 
 @media (pointer: fine) {
     .search-bar button:hover {
-        background-color: #333333;
-        color: #ffffff;
+        background-color: var(--search-bar-button-hover-background-color);
+        color: var(--search-bar-button-hover-color);
         transform: scale(1.125);
     }
 }
@@ -50,3 +63,29 @@
         color: #eeeeee;
         transform: scale(1) translate(0.1vw, 0.1vh);
     }
+
+
+.random-country-button {
+    color: black;
+    padding: 2vh 3vw;
+    margin: 0 auto;
+    display: block;
+    border-radius: 150px;
+    border-style: hidden;
+    user-select: none;
+    background-color: #eeeeee;
+}
+
+@media (pointer: fine) {
+    .random-country-button:hover {
+        background-color: var(--random-country-button-hover-background-color);
+        color: var(--random-country-button-hover-color);
+        transform: scale(1.1);
+    }
+}
+
+.random-country-button:active {
+    background-color: #6666;
+    color: #aaaaaf;
+    transform: scale(0.8);
+}

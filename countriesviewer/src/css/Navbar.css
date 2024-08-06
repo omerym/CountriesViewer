@@ -1,8 +1,20 @@
-.navbar {
+:root {
+    --navbar-background-color: #f4f9ff;
+    --navbar-hover-background-color: #85959f;
+    --color: black;
+}
+@media(prefers-color-scheme:dark){
+    :root {
+        --navbar-background-color: #225522;
+        --navbar-hover-background-color: #295969;
+        --color: white;
+    }
+} .navbar {
     list-style-type: none;
     margin: 0;
     padding:0;
-    background-color: #f4f9ff;
+    background-color: var(--navbar-background-color);
+    color:var(--color);
 }
     .navbar li {
         display: inline-block;
@@ -12,6 +24,6 @@
 
 @media (pointer: fine) {
     .navbar li:hover {
-        background-color: #85959f;
+        background-color: var(--navbar-hover-background-color);
     }
 }

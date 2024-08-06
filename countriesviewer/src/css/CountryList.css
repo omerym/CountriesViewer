@@ -1,29 +1,47 @@
+:root {
+    --country-details-h-color: #001144;
+    --country-details-color: black;
+    --country-list-background-color: #fbfffb;
+    --country-h-color: black;
+    --country-color: black;
+    --country-hover-background-color: #fefeaaf0;
+}
+@media(prefers-color-scheme:dark) {
+    :root {
+        --country-details-h-color: #bbe0cc;
+        --country-details-color: #d0d0ca;
+        --country-list-background-color: #202220;
+        --country-h-color: #d4d0d7;
+        --country-color: #d0d0d0;
+        --country-hover-background-color: #306030f4;
+    }
+}
 .country-list {
     display: flex;
     flex-wrap: wrap;
     margin: 2% 1%;
     padding: 3.5% 1% 1% 1%;
     gap: 2vh 2%;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: baseline;
-    background-color: #fbfffb;
+    background-color: var(--country-list-background-color);
     border-radius: 25px;
     user-select: none;
 }
-    .country {
-        text-align: left;
-        padding: 1%;
-        border-radius: 25px;
-        border-style: hidden;
-        font-size: 2.25vmin;
-        color:black;
-        background-color: #00000000;
-        transition: transform 0.25s ease, background-color 0.25s ease;
-    }
+.country {
+    text-align: left;
+    padding: 1%;
+    border-radius: 10px;
+    border-style: hidden;
+    font-size: max( 2.25vmin,10px);
+    color: var(--country-color);
+    background-color: #00000000;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
 @media (pointer: fine) {
     .country:hover {
         transform: scale(1.2) translateY(-10%);
-        background-color: #fefeaaf0;
+        background-color: var(--country-hover-background-color);
     }
 }
     .country:active {
@@ -33,6 +51,7 @@
 
     .country h1, .country h2, .country h3, .country h4, .country h5, .country h6 {
         margin: 0.25%;
+        color:var(--country-h-color);
     }
 
     .flag {
@@ -63,35 +82,13 @@
 
         .country-details-container h1, .country-details-container h2, .country-details-container h3, .country-details-container h4, .country-details-container h5, .country-details-container h6 {
             text-align: left;
-            color: #001144;
+            color: var(--country-details-h-color);
             margin: 3% 0;
         }
 
     .country-details {
         margin: 1%;
+        color:var(--country-details-color);
         align-content: end;
         font-size: max(1rem,2.75vmin);
-    }
-
-.random-country-button {
-    color: black;
-    padding: 2vh 3vw;
-    margin: 0 auto;
-    display: block;
-    border-radius: 150px;
-    border-style: hidden;
-    user-select: none;
-    background-color: #eeeeee;
-}
-@media (pointer: fine) {
-    .random-country-button:hover {
-        background-color: #333344;
-        color: #ffffe4;
-        transform: scale(1.1);
-    }
-}
-    .random-country-button:active {
-        background-color: #6666;
-        color: #aaaaaf;
-        transform: scale(0.8);
     }
