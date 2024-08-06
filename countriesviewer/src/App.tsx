@@ -1,19 +1,18 @@
 import './css/App.css'
 import Navbar from './Navbar';
 import HomePage from './HomePage';
+import useTheme, { getOppisite } from './useTheme';
 function App() {
-    setTheme();
+    const [theme, toggleTheme] = useTheme();
     return (
         <>
             <header>
-                <Navbar />
+                <Navbar>
+                    <button className="theme-button" onClick={toggleTheme}>{getOppisite(theme)} theme</button>
+                </Navbar>
             </header>
             <HomePage />
         </>
     );
-}
-function setTheme() {
-    const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
-    document.documentElement.setAttribute("data-theme", defaultTheme);
 }
 export default App

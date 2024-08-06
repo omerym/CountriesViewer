@@ -1,11 +1,13 @@
 import './css/Navbar.css'
-function Navbar() {
+interface NavbarProps { children?: React.ReactNode }
+function Navbar({children }:NavbarProps) {
     return (
-        <nav>
+        <nav className="navbar-container">
             <ul className="navbar">
                 <li>Home</li>
                 <li>Quizes</li>
             </ul>
+            {children }
         </nav>
     );
 }

@@ -8,12 +8,20 @@
         --navbar-hover-background-color: #295969;
         --color: #fffafa;
     }
+.navbar-container {
+    background-color: var(--navbar-background-color);
+    color: var(--color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1% 0 0;
+}
 .navbar {
     list-style-type: none;
     margin: 0;
     padding:0;
-    background-color: var(--navbar-background-color);
-    color:var(--color);
+    display:inline;
 }
     .navbar li {
         display: inline-block;
