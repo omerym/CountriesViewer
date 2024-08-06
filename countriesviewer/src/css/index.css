@@ -8,12 +8,10 @@ html, body, #root {
     --body-background-color: #fafafa;
     --header-background-color: #fdffff;
 }
-@media (prefers-color-scheme: dark) {
-    :root {
+    :root[data-theme='dark'] {
         --body-background-color: #30303a;
         --header-background-color: #253030;
     }
-}
     header {
         background-color: var(--header-background-color);
         margin: 0;

@@ -3,13 +3,12 @@
     --navbar-hover-background-color: #85959f;
     --color: black;
 }
-@media(prefers-color-scheme:dark){
-    :root {
-        --navbar-background-color: #225522;
+    :root[data-theme='dark'] {
+        --navbar-background-color: #223022;
         --navbar-hover-background-color: #295969;
-        --color: white;
+        --color: #fffafa;
     }
-} .navbar {
+.navbar {
     list-style-type: none;
     margin: 0;
     padding:0;
@@ -20,6 +19,7 @@
         display: inline-block;
         padding:2.5vh 2.5vw;
         user-select: none;
+        font-size:max(1em,3vmin);
     }
 
 @media (pointer: fine) {

@@ -109,9 +109,9 @@ function CountryDetails({ countryName, flag }: CountryDetailsProps) {
                     {nameFlag}
                     <section className="country-details">
                         {nativeNames !== '' && <><strong>{nativeNamesTitle}</strong>: {nativeNames}.<br /></>}
-                        {nativeNames !== '' && <><strong>{capitalsTitle}</strong>: {capital}.<br /></>}
-                        {nativeNames !== '' && <><strong>{continentsTitle}</strong>: {continents}.<br /></>}
-                        {nativeNames !== '' && <><strong>{languagesTitle}</strong>: {languages}.<br /></>}
+                        {capital  !== '' && <><strong>{capitalsTitle}</strong>: {capital}.<br /></>}
+                        {continents !== '' && <><strong>{continentsTitle}</strong>: {continents}.<br /></>}
+                        {languages !== '' && <><strong>{languagesTitle}</strong>: {languages}.<br /></>}
                         {currencies !== '' && <><strong>{currenciesTitle}</strong>: {currencies}.<br /></>}
                         <strong>area</strong>: {countryDetails.area} km<sup>2</sup>.<br />
                         <strong>region</strong>: {countryDetails.region}, {countryDetails.subregion}.<br />

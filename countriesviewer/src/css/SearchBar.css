@@ -1,17 +1,24 @@
 :root {
     --search-bar-button-hover-background-color: #333333;
     --search-bar-button-hover-color: #ffffff;
+    --search-bar-button-background-color: #bbbbbb;
+    --search-bar-button-color: #000000;
     --random-country-button-hover-background-color: #333344;
     --random-country-button-hover-color: #ffffe4;
+    --random-country-button--background-color: #eeeeee;
+    --random-country-button-color: black;
 }
-@media(prefers-color-scheme: dark) {
-    :root {
+    :root[data-theme='dark'] {
         --search-bar-button-hover-background-color: #858090;
         --search-bar-button-hover-color: #000000;
+        --search-bar-button-background-color: #444455;
+        --search-bar-button-color: #ffffff;
         --random-country-button-hover-background-color: #9999aa;
         --random-country-button-hover-color: #000000;
+        --random-country-button--background-color: #334455;
+        --random-country-button-color: #fffaf0;
     }
-}
+
 .search-bar {
     padding: 1vh;
     text-align: center;
@@ -47,8 +54,8 @@
         padding: max(2.5vmin,20px);
         margin: 0.35%;
         border-style: hidden;
-        background-color: #bbbbbb;
-        color: #000000;
+        background-color: var(--search-bar-button-background-color);
+        color: var(--search-bar-button-color);
     }
 
 @media (pointer: fine) {
@@ -66,26 +73,26 @@
 
 
 .random-country-button {
-    color: black;
+    color: var(--random-country-button-color);
     padding: 2vh 3vw;
     margin: 0 auto;
     display: block;
     border-radius: 150px;
     border-style: hidden;
     user-select: none;
-    background-color: #eeeeee;
+    background-color: var(--random-country-button--background-color);
 }
 
 @media (pointer: fine) {
     .random-country-button:hover {
         background-color: var(--random-country-button-hover-background-color);
         color: var(--random-country-button-hover-color);
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 }
 
 .random-country-button:active {
     background-color: #6666;
     color: #aaaaaf;
-    transform: scale(0.8);
+    transform: scale(0.95);
 }

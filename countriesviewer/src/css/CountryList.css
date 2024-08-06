@@ -6,8 +6,7 @@
     --country-color: black;
     --country-hover-background-color: #fefeaaf0;
 }
-@media(prefers-color-scheme:dark) {
-    :root {
+    :root[data-theme='dark'] {
         --country-details-h-color: #bbe0cc;
         --country-details-color: #d0d0ca;
         --country-list-background-color: #202220;
@@ -15,7 +14,6 @@
         --country-color: #d0d0d0;
         --country-hover-background-color: #306030f4;
     }
-}
 .country-list {
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +53,7 @@
     }
 
     .flag {
-        margin: 1vh 1vw;
+        margin: 1vh 0;
         width: 17.5vw;
         height: auto;
         user-select: none;
