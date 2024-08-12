@@ -1,0 +1,9 @@
+<script type="text/javascript">
+    (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const redirectedPath = urlParams.get('path');
+        if (redirectedPath) {
+            window.history.replaceState(null, null, redirectedPath);
+        }
+    })();
+</script>
