@@ -1,7 +1,7 @@
 import './css/App.css'
 import Navbar from './Navbar';
 import useTheme, { getOpposite } from './useTheme';
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { HashRouter, Outlet, Route, Routes } from 'react-router-dom';
 import CapitalsQuizPage from './Quizzes/CapitalsQuizPage';
 import CurrenciesQuizPage from './Quizzes/CurrenciesQuizPage';
 import FlagsQuizPage from './Quizzes/FlagsQuizPage';
@@ -13,7 +13,7 @@ function App() {
     const [theme, toggleTheme] = useTheme();
     return (
         <>
-            <BrowserRouter basename="/CountriesViewer">
+            <HashRouter >
                 <header>
                     <Navbar>
                         <button className="theme-button" onClick={toggleTheme}>{getOpposite(theme)} theme</button>
@@ -31,7 +31,7 @@ function App() {
                         <Route path="ReverseFlags" Component={ReverseFlagsQuizPage} />
                     </Route>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </>
     );
 }
