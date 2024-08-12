@@ -13,7 +13,7 @@ function App() {
     const [theme, toggleTheme] = useTheme();
     return (
         <>
-            <HashRouter >
+            <HashRouter>
                 <header>
                     <Navbar>
                         <button className="theme-button" onClick={toggleTheme}>{getOpposite(theme)} theme</button>
