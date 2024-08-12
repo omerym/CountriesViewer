@@ -33,7 +33,7 @@ export function useCountries(initialQuery: string = ''):
                 })
                 .then(data => {
                     const names = readNames(data);
-                    const flags = readFlags(data, names);
+                    const flags = readFlags(data);
                     const _countries = filterCountries(names.
                         map((name, i) => [name, flags[i]]), query);
 
@@ -145,12 +145,12 @@ function readCountryDetails(data:any, name: string): CountryDetails {
     country.subregion = data["subregion"];
     return country;
 }
-function readFlags(data : any, names: CountryName[]): Flag[] {
-    return data.map((country : any, i: number) => {
+function readFlags(data : any): Flag[] {
+    return data.map((country : any) => {
         const flag = country["flags"];
         const png = flag["png"];
         const svg = flag["svg"];
-        const alt = flag["alt"] !== '' ? flag["alt"] : `The flag of ${names[i]}`;
+        const alt = flag["alt"];
         return new Flag(png, svg, alt);
     });
 }

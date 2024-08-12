@@ -64,8 +64,8 @@
         padding: 2%;
         margin: 1%;
         border-style: solid;
-        border-color: #00aaff0a;
-        border-radius: 50px;
+        border-color: #00aaff09;
+        border-radius: 2vmin;
         display: flex;
         gap: 2.5%;
         align-content: start;

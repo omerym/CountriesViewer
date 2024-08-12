@@ -1,0 +1,11 @@
+:root {
+    --score-color:black;
+}
+
+    :root[data-theme="dark"] {
+        --score-color: #f0f0f0;
+    }
+
+.quiz-container {
+    text-align: center;
+}

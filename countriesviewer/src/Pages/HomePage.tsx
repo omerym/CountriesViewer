@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import './css/SearchBar.css'
-import './css/CountryList.css'
-import { useCountries, Flag, CountryName, useCountryDetails } from './Countries';
+import '../css/SearchBar.css'
+import '../css/CountryList.css'
+import useCountries, { CountryName, Flag, useCountryDetails } from '../Countries';
+import Loading from '../Loading';
+import Error from "../Error";
 function HomePage() {
     const [countries, loading, setQueryName, error, reload] = useCountries();
     const [selectedCountryName, selectedCountryFlag, setSelectedCountry] = useSelectedCountry(countries);
@@ -27,17 +29,8 @@ function HomePage() {
             </header>
             <CountryDetails countryName={selectedCountryName} flag={selectedCountryFlag} />
             {countriesView}
+            <br/>
         </>
-    );
-}
-
-interface ErrorProps { children?: React.ReactNode, retryMessage?: string, retry: () => void }
-function Error({ children, retryMessage = "click here to retry.", retry }: ErrorProps) {
-    return (
-        <div className="error">
-            {children}
-            <button onClick={retry}>{retryMessage}</button>
-        </div>
     );
 }
 function useSelectedCountry(countries: [CountryName, Flag][], initialName: string = ''):
@@ -161,9 +154,6 @@ function Search({ setQueryName }: SearchProps) {
             {query !== '' && (<button onClick={handleReset}>All</button>)}
         </form>
     );
-}
-function Loading() {
-    return <div className="loading"></div>;
 }
 interface CountryListProps { countries: [CountryName, Flag][], setCountry?: (name: string) => void }
 function CountryList({ countries, setCountry }: CountryListProps) {

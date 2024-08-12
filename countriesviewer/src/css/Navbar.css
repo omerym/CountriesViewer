@@ -1,37 +1,56 @@
 :root {
+    --navbar-color: #333300;
     --navbar-background-color: #f4f9ff;
     --navbar-hover-background-color: #85959f;
-    --color: black;
+    --navbar-active-color: #333300;
+    --navbar-active-background-color: #828588;
+    --navbar-active-hover-background-color: #727578;
 }
     :root[data-theme='dark'] {
+        --navbar-color: #ffeeff;
         --navbar-background-color: #223022;
         --navbar-hover-background-color: #295969;
-        --color: #fffafa;
+        --navbar-active-color: #ffeeff;
+        --navbar-active-background-color: #446044;
+        --navbar-active-hover-background-color: #557055;
     }
 .navbar-container {
     background-color: var(--navbar-background-color);
-    color: var(--color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0 1% 0 0;
+    padding:0;
 }
 .navbar {
     list-style-type: none;
     margin: 0;
-    padding:0;
-    display:inline;
+    padding: 0;
+    display: inline-block;
+    user-select: none;
 }
     .navbar li {
-        display: inline-block;
-        padding:2.5vh 2.5vw;
-        user-select: none;
+        display: inline;
+        margin: 0;
+        padding:0;
+    }
+    .navbar a {
+        margin:0;
+        padding: 2.5vh 2.5vw;
+        color: var(--navbar-color);
+        text-decoration:none;
         font-size:max(1em,3vmin);
     }
-
+        .navbar a.active {
+            background-color: var(--navbar-active-background-color);
+            color: var(--navbar-active-color);
+        }
 @media (pointer: fine) {
-    .navbar li:hover {
+    .navbar a:hover {
         background-color: var(--navbar-hover-background-color);
+    }
+    .navbar a.active:hover {
+        background-color: var(--navbar-active-hover-background-color);
     }
 }

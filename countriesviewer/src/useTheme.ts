@@ -38,7 +38,7 @@ export function useTheme(initialTheme?: theme): [theme, () => void] {
     return [_theme, toggleTheme];
 }
 export function switchTheme() {
-    setTheme(getOppisite(getCurrentTheme()));
+    setTheme(getOpposite(getCurrentTheme()));
     return getCurrentTheme();
 }
 export function setTheme(theme: theme) {
@@ -52,7 +52,7 @@ export function getSystemTheme() {
     const dark = mediaQuery.matches;
     return dark ? 'dark' : 'light';
 }
-export function getOppisite(theme: theme) {
+export function getOpposite(theme: theme) {
     return theme === 'dark' ? 'light' : 'dark';
 }
 export default useTheme;
