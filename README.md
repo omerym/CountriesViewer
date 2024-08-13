@@ -6,3 +6,6 @@
 react with typescript.
 ### data:
 countries data from https://restcountries.com/
+
+### website:
+https://omerym.github.io/CountriesViewer/
