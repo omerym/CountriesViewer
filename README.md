@@ -9,3 +9,5 @@ countries data from https://restcountries.com/
 
 ### website:
 https://omerym.github.io/CountriesViewer/
+\
+docs folder contains the built project.
