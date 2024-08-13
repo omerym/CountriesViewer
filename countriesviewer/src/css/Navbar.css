@@ -1,18 +1,18 @@
 :root {
-    --navbar-color: #333300;
-    --navbar-background-color: #f4f9ff;
-    --navbar-hover-background-color: #85959f;
-    --navbar-active-color: #333300;
-    --navbar-active-background-color: #828588;
-    --navbar-active-hover-background-color: #727578;
+    --navbar-color: #000000;
+    --navbar-background-color: #DFCDAF;
+    --navbar-hover-background-color: #4d402c;
+    --navbar-active-color: #000000;
+    --navbar-active-background-color: #bf9660;
+    --navbar-active-hover-background-color: #bf9e73;
 }
     :root[data-theme='dark'] {
-        --navbar-color: #ffeeff;
-        --navbar-background-color: #223022;
-        --navbar-hover-background-color: #295969;
-        --navbar-active-color: #ffeeff;
-        --navbar-active-background-color: #446044;
-        --navbar-active-hover-background-color: #557055;
+        --navbar-color: #ffffff;
+        --navbar-background-color: #262121;
+        --navbar-hover-background-color: #4a2e25;
+        --navbar-active-color: #ffffff;
+        --navbar-active-background-color: #945641;
+        --navbar-active-hover-background-color: #997c73;
     }
 .navbar-container {
     background-color: var(--navbar-background-color);
@@ -27,7 +27,6 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: inline-block;
     user-select: none;
 }
     .navbar li {
@@ -36,6 +35,7 @@
         padding:0;
     }
     .navbar a {
+        display:inline-block;
         margin:0;
         padding: 2.5vh 2.5vw;
         color: var(--navbar-color);

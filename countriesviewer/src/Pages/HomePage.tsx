@@ -23,7 +23,7 @@ function HomePage() {
     }
     return (
         <>
-            <header>
+            <header className="search-bar-container">
                 <Search setQueryName={setQueryName} />
                 <RandomCountryBytton countries={countries} setCountry={setSelectedCountry} />
             </header>

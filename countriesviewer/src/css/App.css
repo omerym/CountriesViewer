@@ -1,16 +1,24 @@
 :root {
-    --theme-button-hover-background-color: #505060;
-    --theme-button-color: #f0f0f0;
-    --theme-button-background-color: #0f0f1f;
+    --error-color: black;
+    --error-button-color: #004488;
+    --theme-button-hover-background-color: #403420;
+    --theme-button-color: black;
+    --theme-button-background-color: #aa8b55;
+    --empty-list-background-color: #6d9195;
+    --empty-list-color: black;
 }
     :root[data-theme="dark"] {
-        --theme-button-hover-background-color: #e0ffe0;
-        --theme-button-background-color: #f0fff0;
-        --theme-button-color: #0f0f0f;
+        --error-color: white;
+        --error-button-color: #004488;
+        --theme-button-hover-background-color: #c25c3d;
+        --theme-button-color: white;
+        --theme-button-background-color: #26120c;
+        --empty-list-background-color: #26120c;
+        --empty-list-color: white;
     }
 .theme-button {
     margin: 0.5%;
-    padding: 1.75vh 2vw;
+    padding: 1.5vh 2vw;
     font-size: 1em;
     border-radius: 1vw;
     border-style: none;
@@ -33,9 +41,8 @@
     padding: 5vh 0.5vw;
     border-radius: 250px;
     user-select: none;
-}
-.empty-list {
-    background-color: #888888;
+    background-color: var(--empty-list-background-color);
+    color: var(--empty-list-color);
 }
 .loading {
     border-radius: 50%;
@@ -57,32 +64,27 @@
 
 
 .error, .error * {
-    padding:1%;
+    padding: 1%;
     margin: auto auto;
     font-size: max(3.5vmin, 1em);
     text-align: center;
-    user-select:none;
+    user-select: none;
+    color: var(--error-color);
 }
-@media (prefers-color-scheme:dark){
-    .error, .error *{
-        color:white;
-    }
-
-} .error button {
-    color: #00aaff;
+.error button {
+    color: var(--error-button-color);
     background-color: #00000000;
     border-style: none;
     user-select: none;
+    border-radius:5vmin;
 }
 
 @media (pointer: fine) {
     .error button:hover {
-        color: #00bbff;
-        background-color: #aaaa990f;
+        background-color: #8888880f;
     }
 }
     .error button:active {
-        color: #0099ee;
-        background-color: #aaaa9910;
+        color: #888888;
         transform: translateY(5%);
     }

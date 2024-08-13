@@ -1,18 +1,20 @@
 :root {
-    --country-details-h-color: #001144;
+    --country-details-h-color: #000033;
     --country-details-color: black;
-    --country-list-background-color: #fbfffb;
-    --country-h-color: black;
+    --country-details-background-color: #DFCDAF;
+    --country-list-background-color: #DFCDAF;
+    --country-h-color: #000033;
     --country-color: black;
-    --country-hover-background-color: #fefeaaf0;
+    --country-hover-background-color: #b5c7c9f5;
 }
     :root[data-theme='dark'] {
-        --country-details-h-color: #bbe0cc;
-        --country-details-color: #d0d0ca;
-        --country-list-background-color: #202220;
-        --country-h-color: #d4d0d7;
+        --country-details-h-color: #fff4f2;
+        --country-details-color: #fff4f2;
+        --country-details-background-color: #262121;
+        --country-list-background-color: #262121;
+        --country-h-color: #fff4f2;
         --country-color: #d0d0d0;
-        --country-hover-background-color: #306030f4;
+        --country-hover-background-color: #26120cfa;
     }
 .country-list {
     display: flex;
@@ -60,18 +62,18 @@
     }
 
 
-    .country-details-container {
-        padding: 2%;
-        margin: 1%;
-        border-style: solid;
-        border-color: #00aaff09;
-        border-radius: 2vmin;
-        display: flex;
-        gap: 2.5%;
-        align-content: start;
-        flex-wrap: wrap;
-        font-size: 1.1em;
-    }
+.country-details-container {
+    padding: 2%;
+    margin: 1%;
+    border-style: none;
+    border-radius: 2vmin;
+    display: flex;
+    gap: 2.5%;
+    align-content: start;
+    flex-wrap: wrap;
+    font-size: 1.1em;
+    background-color: var(--country-details-background-color);
+}
 
         .country-details-container img {
             max-width: 90vw;

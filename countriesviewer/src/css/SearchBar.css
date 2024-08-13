@@ -1,23 +1,24 @@
 :root {
-    --search-bar-button-hover-background-color: #333333;
-    --search-bar-button-hover-color: #ffffff;
-    --search-bar-button-background-color: #bbbbbb;
+    --search-bar-button-hover-background-color: #667d80;
+    --search-bar-button-background-color: #6d9195;
     --search-bar-button-color: #000000;
-    --random-country-button-hover-background-color: #333344;
-    --random-country-button-hover-color: #ffffe4;
-    --random-country-button--background-color: #eeeeee;
-    --random-country-button-color: black;
+    --search-bar-input-color: #000000;
+    --search-bar-input-background-color: #b5c7c9;
+    --search-bar-input-hover-background-color: #d6fbff;
+    --search-bar-input-focus-background-color: #e6fcff;
 }
     :root[data-theme='dark'] {
-        --search-bar-button-hover-background-color: #858090;
-        --search-bar-button-hover-color: #000000;
-        --search-bar-button-background-color: #444455;
-        --search-bar-button-color: #ffffff;
-        --random-country-button-hover-background-color: #9999aa;
-        --random-country-button-hover-color: #000000;
-        --random-country-button--background-color: #334455;
-        --random-country-button-color: #fffaf0;
+        --search-bar-button-hover-background-color: #667d80;
+        --search-bar-button-background-color: #26120c;
+        --search-bar-button-color: #f2fcff;
+        --search-bar-input-color: #e6f9ff;
+        --search-bar-input-background-color: #40261f;
+        --search-bar-input-hover-background-color: #331f18;
+        --search-bar-input-focus-background-color: #26120c;
     }
+.search-bar-container{
+    padding:0 0 2% 0;
+}
 
 .search-bar {
     padding: 1vh;
@@ -27,8 +28,9 @@
     .search-bar input {
         border-radius: 50px;
         border-style: solid;
-        border-color: #cccccc;
-        background-color: #cccccc;
+        border-color: #00000000;
+        color:var(--search-bar-input-color);
+        background-color: var(--search-bar-input-background-color);
         height: 5vh;
         width: 20vw;
         min-height: 25px;
@@ -40,59 +42,38 @@
 @media (pointer: fine) {
     .search-bar input:hover {
         border-style: solid;
-        border-color: #bbbbbb;
-        background-color: #d3d3d3;
+        border-color: #888888;
+        background-color: var(--search-bar-input-hover-background-color);
     }
 }
-    .search-bar input:focus {
-        transform: scale(1.05);
-        background-color: #dfdfdf;
-    }
+.search-bar input:focus {
+    transform: scale(1.05);
+    background-color: var(--search-bar-input-focus-background-color);
+}
 
-    .search-bar button {
+    .search-bar button, .random-country-button {
         border-radius: 50px;
         padding: max(2.5vmin,20px);
-        margin: 0.35%;
         border-style: hidden;
         background-color: var(--search-bar-button-background-color);
         color: var(--search-bar-button-color);
     }
+.search-bar button {
+    margin: 0.35%;
+}
+    .random-country-button{
+        margin:0 auto;
+        display:block;
+    }
 
 @media (pointer: fine) {
-    .search-bar button:hover {
+    .search-bar button:hover, .random-country-button:hover{
         background-color: var(--search-bar-button-hover-background-color);
-        color: var(--search-bar-button-hover-color);
-        transform: scale(1.125);
-    }
-}
-    .search-bar button:active {
-        background-color: #666666;
-        color: #eeeeee;
-        transform: scale(1) translate(0.1vw, 0.1vh);
-    }
-
-
-.random-country-button {
-    color: var(--random-country-button-color);
-    padding: 2vh 3vw;
-    margin: 0 auto;
-    display: block;
-    border-radius: 150px;
-    border-style: hidden;
-    user-select: none;
-    background-color: var(--random-country-button--background-color);
-}
-
-@media (pointer: fine) {
-    .random-country-button:hover {
-        background-color: var(--random-country-button-hover-background-color);
-        color: var(--random-country-button-hover-color);
         transform: scale(1.05);
     }
 }
-
-.random-country-button:active {
-    background-color: #6666;
-    color: #aaaaaf;
+.search-bar button:active, .random-country-button:active {
+    background-color: #666666;
+    color: #eeeeee;
     transform: scale(0.95);
 }

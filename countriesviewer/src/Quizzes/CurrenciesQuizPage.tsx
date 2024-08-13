@@ -19,7 +19,7 @@ function CurrenciesQuizPage() {
         element = <CurrenciesQuiz currencies={currencies} addQuesitonScore={addQuesitonScore} />
     }
     return <div>
-        <p className="score">Answered <strong>{correctAnswersCount}</strong> out of <strong>{questionsCount}</strong> questions correctly.</p>
+        <p className="score">You have answered {correctAnswersCount}  questions correctly and {questionsCount - correctAnswersCount}  questions incorrectly.</p>
         {element}
     </div>;
 }

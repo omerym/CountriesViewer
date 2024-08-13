@@ -1,20 +1,18 @@
 :root {
-    --question-container-background-color: #f0faff;
-    --question-container-color: #332200;
-    --option-background-color: #ffffff;
-    --option-background-color-2: #fcfcfc;
-    --option-hover-background-color: #f0f0fa;
-    --next-button-background-color: #aaccff;
+    --question-container-background-color: #DFCDAF;
+    --question-container-color: #0d181a;
+    --option-background-color: #b5c7c9;
+    --option-hover-background-color: #c3d7d9;
+    --next-button-background-color: #c3d7d9;
     --correct-answer-background-color: #00ff00;
 }
 
     :root[data-theme="dark"] {
-        --question-container-background-color: #100a03;
-        --question-container-color: #f0faff;
-        --option-background-color: #000000;
-        --option-background-color-2: #070707;
-        --option-hover-background-color: #101510;
-        --next-button-background-color: #003300;
+        --question-container-background-color: #262121;
+        --question-container-color: #e6ffff;
+        --option-background-color: #26120c;
+        --option-hover-background-color: #632d1d;
+        --next-button-background-color: #632d1d;
         --correct-answer-background-color: #004400;
     }
 

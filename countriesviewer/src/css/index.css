@@ -5,17 +5,17 @@ html, body, #root {
     height: 100%;
 }
 :root {
-    --body-background-color: #fafafa;
-    --header-background-color: #fdffff;
+    --body-background-color: #FBEDDB;
+    --header-background-color: #DFCDAF;
 }
     :root[data-theme='dark'] {
-        --body-background-color: #30303a;
-        --header-background-color: #253030;
+        --body-background-color: #261c1b;
+        --header-background-color: #262121;
     }
     header {
         background-color: var(--header-background-color);
         margin: 0;
-        padding:0 0 1% 0;
+        padding:0;
     }
 
     body {
